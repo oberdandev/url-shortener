@@ -17,6 +17,10 @@ const shortUrls = [
   }
 ]
 
+app.get('/api/urls', (req,res) => {
+  res.json(shortUrls)
+})
+
 app.listen(PORT, ()=> console.log('app running at: ' + PORT))
 
 app.use(express.urlencoded({extended: true}))
@@ -29,13 +33,17 @@ app.get('/style.css', (req, res) => {
   res.sendFile(path.resolve('./src/pages/style.css'))
 })
 
+app.get('/getUrlsToTable.js', (req, res) => {
+  res.sendFile(path.resolve('./src/pages/getUrlsToTable.js'))
+})
+
 app.post('/shortUrls', (req,res) => {
 
-    const params = req.body.fullUrl
+    const params = req.body
   
     const urls = shortUrls;
 
-    const newUrl = {full: params, short: '123'}
+    const newUrl = {short: params.shortUrl, full: params.fullUrl}
 
     urls.push(newUrl)
 
