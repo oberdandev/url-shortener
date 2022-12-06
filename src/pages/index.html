@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
 
     <!-- scripts -->
@@ -18,14 +18,16 @@
 
 
   <div class="container-sm">
+    <div class="container">
     <h1>shortener-url</h1>
   <form action="/shortUrls" method="POST" class="my-4 form-inline">
     <label for="fullUrl" class="sr-only">url</label>
-    <input required type="url" placeholder="Url" name="fullUrl" id="fullUrl" class='form-control col mr-2'>
+    <input required type="url" placeholder="Url" name="fullUrl" id="fullUrl" class='form-control-mr col ms-4 mr-2'>
     <label for="shortUrl" class="sr-only">Encurtador</label>
-    <input required type="text" placeholder="digite o apelido para o site" name="shortUrl" id="shortUrl" class='form-control col mr-2'>
+    <input required type="text" placeholder="digite o apelido para o site" name="shortUrl" id="shortUrl" class='form-control-mr col ms-4'>
     <button type="submit" class="btn btn-primary my-2">Encurtar</button>
   </form>
+</div>
 
 
 <table class="table table-striped table-responsive" id="tableUrls">
@@ -36,17 +38,6 @@
       <th>Clicks</th>
     </tr>
   </thread>
-  <tbody>
-    <td>
-      <a href="https://www.google.com.br">www.google.com.br</a>
-    </td>
-    <td>
-      <a href="/123">123</a>
-    </td>
-    <td>
-      10
-    </td>
-  </tbody>
 </table>
 </div>
 

@@ -19,7 +19,7 @@ async function addUrlsToTable(url) {
       <a href="/${url.short}">${url.short}</a>
     </td>
     <td>
-      10
+      ${url.clicks}
     </td>
   </tbody>`)
   })

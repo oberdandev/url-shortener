@@ -9,11 +9,13 @@ const PORT = 3000;
 const shortUrls = [
   {
     short: 'gg',
-    full: 'https://google.com/'
+    full: 'https://google.com/',
+    clicks: 0
   },
   {
     short: 'dev',
     full: 'https:/github.com/oberdandev',
+    clicks: 0
   }
 ]
 
@@ -43,7 +45,7 @@ app.post('/shortUrls', (req,res) => {
   
     const urls = shortUrls;
 
-    const newUrl = {short: params.shortUrl, full: params.fullUrl}
+    const newUrl = {short: params.shortUrl, full: params.fullUrl, clicks: 0}
 
     urls.push(newUrl)
 
